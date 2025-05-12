@@ -7,11 +7,11 @@ LDLIBS = -lcheck -lz -lm -lsubunit -lrt -lpthread -lfuse
 
 all: unittest-1 unittest-2 fuse test.img test2.img
 
-unittest-1: unittest-1.o homework.o misc.o
+unittest-1: unittest-1.o fs.o misc.o
 
-unittest-2: unittest-2.o homework.o misc.o
+unittest-2: unittest-2.o fs.o misc.o
 
-fuse: misc.o homework.o fuse.o
+fuse: misc.o fs.o fuse.o
 
 
 # force test.img, test2.img to be rebuilt each time
